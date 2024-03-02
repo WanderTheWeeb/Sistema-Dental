@@ -1,0 +1,15 @@
+---
+import ContraindicacionesFilter from '../components/ContraIndicacionesFilter.astro'
+import Indicaciones from '../components/Indicaciones.astro'
+import DatosConsulta from '../components/DatosConsulta.astro'
+---
+
+<div class="flex flex-row justify-between p-6">
+    <DatosConsulta nombre='José' apellido='Chavarria' fechaNacimiento='05/03/2003'/>
+    <Indicaciones title='Indicaciones' description='Al paciente le encanta comer verga!'/>
+    <ContraindicacionesFilter />
+</div>
+
+<style>
+
+</style>

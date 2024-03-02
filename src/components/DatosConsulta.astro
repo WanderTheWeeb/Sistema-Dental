@@ -1,0 +1,16 @@
+---
+interface Props{
+    nombre: string;
+    apellido: string;    
+    fechaNacimiento: String; //Cambiar a Date
+
+}
+
+const {nombre, apellido, fechaNacimiento} = Astro.props;
+---
+
+<div class="flex flex-col gap-5">
+    <h1>Nombre: {nombre}</h1>
+    <h1>Apellido: {apellido}</h1>
+    <h1>Fecha de Nacimiento: {fechaNacimiento}</h1>
+</div>
