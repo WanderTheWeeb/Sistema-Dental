@@ -1,0 +1,44 @@
+---
+import Header from '../components/Header.astro';
+import AsideFilter from '../components/AsideFilter.astro';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<main id="app" class="relative h-screen p-2 gap-2 ">
+			<div class="[grid-area:aside] border-4 border-black rounded-sm">
+				<AsideFilter />
+			</div>
+			<div class="[grid-area:main] bg-cyan-200 rounded-sm">
+				<slot />
+			</div>
+		</main>
+	</body>
+</html>
+
+<style>
+	#app {
+        display: grid;
+        grid-template-areas:
+          "aside main main"
+          "aside main main";
+        grid-template-columns: 350px 1fr;
+        grid-template-rows: 1fr auto;
+      }
+
+</style>

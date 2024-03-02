@@ -1,0 +1,19 @@
+---
+import TextFieldFilter from '../components/TextFieldFilter.astro'
+import IndicacionesFilter from '../components/IndicacionesFilter.astro'
+import ContraIndicacionesFilter from '../components/ContraIndicacionesFilter.astro'
+---
+
+<aside class="flex justify-center w-full h-full pt-10">
+    <div>
+        <h2 class="text-3xl mb-14 text-center">Filtros</h2>
+        <TextFieldFilter label="Id" id='Id' placeholder="030424" type="text"/>
+        <TextFieldFilter label='Nombre' id='Nombre' placeholder='Edoardo' type="text"/>
+        <IndicacionesFilter  id='indicaciones' placeholder='El paciente tiene diabetes y se presento con una dosis grande de caña de azucar' title="Indicaciones"/>
+        <ContraIndicacionesFilter />
+    </div>
+</aside>
+
+<style>
+    
+</style>

@@ -1,0 +1,12 @@
+---
+interface Props{
+    id: string;
+    title: string;
+    placeholder: string;
+}
+
+const { id,title, placeholder } = Astro.props;
+---
+
+<label for={id} class="block">{title}</label>
+<textarea name={id} id={id} cols="30" rows="10" placeholder={placeholder} class="p-2.5 rounded-lg border-2 border-black mb-10"></textarea>
